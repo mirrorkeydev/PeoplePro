@@ -21,7 +21,8 @@ namespace PeoplePro2.Controllers
         // GET: Employees
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Employee.ToListAsync());
+            var peoplePro2Context = _context.Employee.Include(d => d.Department);
+            return View(await peoplePro2Context.ToListAsync());
         }
 
         // GET: Employees/Details/5
@@ -33,6 +34,7 @@ namespace PeoplePro2.Controllers
             }
 
             var employee = await _context.Employee
+                .Include(d => d.Department)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (employee == null)
             {
@@ -45,6 +47,7 @@ namespace PeoplePro2.Controllers
         // GET: Employees/Create
         public IActionResult Create()
         {
+            ViewData["DepartmentId"] = new SelectList(_context.Set<Department>(), "DepartmentId", "Name");
             return View();
         }
 
@@ -53,7 +56,7 @@ namespace PeoplePro2.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FirstName")] Employee employee)
+        public async Task<IActionResult> Create([Bind("Id,FirstName,DepartmentId")] Employee employee)
         {
             if (ModelState.IsValid)
             {
@@ -61,6 +64,7 @@ namespace PeoplePro2.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["DepartmentId"] = new SelectList(_context.Set<Department>(), "DepartmentId", "Name", employee.DepartmentId);
             return View(employee);
         }
 
@@ -77,6 +81,7 @@ namespace PeoplePro2.Controllers
             {
                 return NotFound();
             }
+            ViewData["DepartmentId"] = new SelectList(_context.Set<Department>(), "DepartmentId", "Name", employee.DepartmentId);
             return View(employee);
         }
 
@@ -85,7 +90,7 @@ namespace PeoplePro2.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName")] Employee employee)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,DepartmentId")] Employee employee)
         {
             if (id != employee.Id)
             {
@@ -112,6 +117,7 @@ namespace PeoplePro2.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["DepartmentId"] = new SelectList(_context.Set<Department>(), "DepartmentId", "Name", employee.DepartmentId);
             return View(employee);
         }
 
@@ -124,6 +130,7 @@ namespace PeoplePro2.Controllers
             }
 
             var employee = await _context.Employee
+                .Include(d => d.Department)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (employee == null)
             {

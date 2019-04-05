@@ -8,6 +8,7 @@ namespace PeoplePro2.Models
 {
     public class Department
     {
+
         [Key]
         public int DepartmentId { get; set; }
 
@@ -19,6 +20,7 @@ namespace PeoplePro2.Models
         //navigation property for Building
         public virtual Building Building { get; set; }
 
+        //nagivation property for employees
         public virtual ICollection<Employee> Employees { get; set; }
     }
 }

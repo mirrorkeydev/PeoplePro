@@ -14,6 +14,7 @@ namespace PeoplePro2.Models
         [Required]
         public string Name { get; set; }
 
+        //navigation property for departments
         public virtual ICollection<Department> Departments { get; set; }
     }
 }

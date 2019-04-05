@@ -12,10 +12,11 @@ namespace PeoplePro2.Models
         public int Id { get; set; }
 
         [Required]
+        [Display(Name = "First Name")]
         public string FirstName { get; set; }
 
         //foreignkey
-        public int DepartmentId { get; set; }
+        public int? DepartmentId { get; set; }
         //navigation property
         public virtual Department Department { get; set; }
 
