@@ -21,7 +21,8 @@ namespace PeoplePro2.Controllers
         // GET: Buildings
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Building.ToListAsync());
+            var peoplePro2Context = _context.Building.Include(d => d.Departments);
+            return View(await peoplePro2Context.ToListAsync());
         }
 
         // GET: Buildings/Details/5

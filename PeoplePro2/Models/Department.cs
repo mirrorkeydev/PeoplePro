@@ -21,6 +21,7 @@ namespace PeoplePro2.Models
         public virtual Building Building { get; set; }
 
         //nagivation property for employees
+        [Display(Name = "Employees")]
         public virtual ICollection<Employee> Employees { get; set; }
     }
 }
