@@ -35,6 +35,7 @@ namespace PeoplePro2.Controllers
 
             var department = await _context.Department
                 .Include(d => d.Building)
+                .Include(d => d.Employees)
                 .FirstOrDefaultAsync(m => m.DepartmentId == id);
             if (department == null)
             {

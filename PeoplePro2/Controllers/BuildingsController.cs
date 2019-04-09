@@ -34,6 +34,7 @@ namespace PeoplePro2.Controllers
             }
 
             var building = await _context.Building
+                .Include(d => d.Departments)
                 .FirstOrDefaultAsync(m => m.BuildingId == id);
             if (building == null)
             {
