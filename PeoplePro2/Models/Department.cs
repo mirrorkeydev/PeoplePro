@@ -16,6 +16,7 @@ namespace PeoplePro2.Models
         public string Name { get; set; }
 
         //foreign key for Building
+        [Display(Name = "Building")]
         public int BuildingId { get; set; }
         //navigation property for Building
         public virtual Building Building { get; set; }

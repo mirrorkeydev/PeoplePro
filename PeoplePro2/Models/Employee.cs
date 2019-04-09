@@ -16,6 +16,7 @@ namespace PeoplePro2.Models
         public string FirstName { get; set; }
 
         //foreignkey
+        [Display(Name = "Department")]
         public int? DepartmentId { get; set; }
         //navigation property
         public virtual Department Department { get; set; }
