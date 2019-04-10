@@ -26,7 +26,7 @@ If you are unfamiliar with git and using github to manage this training project,
 ## Deliverables 
   * :white_check_mark: MVC web application with basic CRUD (Create, Read, Update, and Delete) views
   * :white_check_mark: Entity framework models
-  * :white_square_button: Model metadata attributes
+  * :white_check_mark: Model metadata attributes
   * :white_check_mark: Relational database for Employees, Departments, and Buildings
   * :white_check_mark: Use of display and editor template
   * :white_check_mark: Database project
