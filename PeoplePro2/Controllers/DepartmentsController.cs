@@ -18,6 +18,30 @@ namespace PeoplePro2.Controllers
             _context = context;
         }
 
+        // AJAX POPUP: Departments
+        public IActionResult AddDepartment()
+        {
+            var model = new Department { };
+
+            ViewBag.Building = new SelectList(_context.Set<Building>(), "BuildingId", "Name");
+
+            return PartialView("Partial", model);
+        }
+
+        //AJAX Post
+        [HttpPost]
+        public IActionResult Department([Bind("DepartmentId,Name,BuildingId")] Department department)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(department);
+                _context.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+            ViewData["BuildingId"] = new SelectList(_context.Set<Building>(), "DepartmentId", "Name", department.BuildingId);
+            return View(department);
+        }
+
         // GET: Departments
         public async Task<IActionResult> Index()
         {

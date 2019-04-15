@@ -6,7 +6,7 @@
 $(function () {
     var placeholderElement = $('#modal-placeholder');
     $('button[data-toggle="ajax-modal"]').click(function (event) {
-        console.log("You pressed the button!")
+        console.log("You clicked the button!");
         var url = $(this).data('url');
         $.get(url).done(function (data) {
             placeholderElement.html(data);
@@ -19,6 +19,7 @@ $(function () {
 
         var form = $(this).parents('.modal').find('form');
         var actionUrl = form.attr('action');
+        console.log("Your actionUrl is: " + actionUrl);
         var dataToSend = form.serialize();
 
         $.post(actionUrl, dataToSend).done(function (data) {

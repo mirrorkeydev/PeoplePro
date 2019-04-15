@@ -6,6 +6,9 @@
 
 <h2>Department Directory</h2>
 
+<!-- Modal placeholder -->
+<div id="modal-placeholder"></div>
+
 <p>
     <a asp-action="Create">Create New</a>
 </p>
@@ -25,27 +28,33 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Building.Name)
-            </td>
-            <td>
-                @foreach (var employee in item.Employees)
-                {
-                    @employee.FirstName
-                    <div> </div>
-                }
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.DepartmentId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.DepartmentId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.DepartmentId">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Building.Name)
+                </td>
+                <td>
+                    @foreach (var employee in item.Employees)
+                    {
+                        @employee.FirstName
+                        <div> </div>
+                    }
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.DepartmentId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.DepartmentId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.DepartmentId">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="ajax-modal" data-target="#add-department" data-url="@Url.Action("AddDepartment")">
+    Add Department (AJAX)
+</button>
