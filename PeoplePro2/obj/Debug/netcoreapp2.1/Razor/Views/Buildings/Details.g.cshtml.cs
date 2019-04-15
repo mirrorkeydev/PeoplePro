@@ -119,7 +119,7 @@ using PeoplePro2.Models;
             WriteLiteral("        </dd>\r\n    </dl>\r\n</div>\r\n<div>\r\n    ");
             EndContext();
             BeginContext(644, 62, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "559fa8cfa716476c9b1b3f9a7a568596", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ef26ca569f2e4f278a132db1e6b665de", async() => {
                 BeginContext(698, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -154,7 +154,7 @@ using PeoplePro2.Models;
             WriteLiteral(" |\r\n    ");
             EndContext();
             BeginContext(714, 38, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1c7bf858f1704a80bb20b97f25c2ed45", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9b488a0dc3fc4fe785ed48fb748fa8ed", async() => {
                 BeginContext(736, 12, true);
                 WriteLiteral("Back to List");
                 EndContext();

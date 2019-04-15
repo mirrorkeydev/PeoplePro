@@ -23,6 +23,8 @@ namespace PeoplePro2.Controllers
         {
             var model = new Employee { };
 
+            ViewBag.Department = new SelectList(_context.Set<Department>(), "DepartmentId", "Name");
+
             return PartialView("Partial", model);
         }
 
