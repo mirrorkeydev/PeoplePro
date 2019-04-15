@@ -141,3 +141,4 @@ C:\Users\gutzmanm\source\repos\PeoplePro\PeoplePro2\obj\Debug\netcoreapp2.1\Peop
 C:\Users\gutzmanm\source\repos\PeoplePro\PeoplePro2\obj\Debug\netcoreapp2.1\PeoplePro2.csproj.CopyComplete
 C:\Users\gutzmanm\source\repos\PeoplePro\PeoplePro2\obj\Debug\netcoreapp2.1\Razor\Views\Employees\Partial.g.cshtml.cs
 C:\Users\gutzmanm\source\repos\PeoplePro\PeoplePro2\obj\Debug\netcoreapp2.1\Razor\Views\Departments\Partial.g.cshtml.cs
+C:\Users\gutzmanm\source\repos\PeoplePro\PeoplePro2\obj\Debug\netcoreapp2.1\Razor\Views\Buildings\Partial.g.cshtml.cs

@@ -66,7 +66,7 @@ using PeoplePro2.Models;
             WriteLiteral("\r\n<h2>Employee Directory</h2>\r\n\r\n<!-- Modal placeholder -->\r\n<div id=\"modal-placeholder\"></div>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(203, 37, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "494b9bde831d4f4db7d06fb1abd030cd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3036fb0deee74b64b2f77df8573ea88b", async() => {
                 BeginContext(226, 10, true);
                 WriteLiteral("Create New");
                 EndContext();
@@ -157,7 +157,7 @@ using PeoplePro2.Models;
             WriteLiteral("\r\n                </td>\r\n                <td>\r\n                    ");
             EndContext();
             BeginContext(1143, 53, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "df3a350ce34845219dd36bfca4dcbb26", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2727589fcf12425487cc031c25edaeff", async() => {
                 BeginContext(1188, 4, true);
                 WriteLiteral("Edit");
                 EndContext();
@@ -192,7 +192,7 @@ using PeoplePro2.Models;
             WriteLiteral(" |\r\n                    ");
             EndContext();
             BeginContext(1220, 59, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "33186e13939d4ecaac06345a7cb623b7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0065f26e9f9c4408b09a5774887f096d", async() => {
                 BeginContext(1268, 7, true);
                 WriteLiteral("Details");
                 EndContext();
@@ -227,7 +227,7 @@ using PeoplePro2.Models;
             WriteLiteral(" |\r\n                    ");
             EndContext();
             BeginContext(1303, 57, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7f014a722d3f4f05b0e80485946a97bb", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "036d07f701664b638ebca9e79b22351e", async() => {
                 BeginContext(1350, 6, true);
                 WriteLiteral("Delete");
                 EndContext();

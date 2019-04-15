@@ -11,6 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Update="Views\Buildings\Partial.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Update="Views\Departments\Partial.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>

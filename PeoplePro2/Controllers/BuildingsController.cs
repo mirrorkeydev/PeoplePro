@@ -18,6 +18,28 @@ namespace PeoplePro2.Controllers
             _context = context;
         }
 
+        // AJAX POPUP: Buildings
+        public IActionResult AddBuilding()
+        {
+            var model = new Building { };
+
+            return PartialView("Partial", model);
+        }
+
+        //AJAX Post
+        [HttpPost]
+        public IActionResult Building([Bind("BuildingId,Name")] Building building)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(building);
+                _context.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+            //ViewData["BuildingId"] = new SelectList(_context.Set<Building>(), "DepartmentId", "Name", department.BuildingId);
+            return View(building);
+        }
+
         // GET: Buildings
         public async Task<IActionResult> Index()
         {
